@@ -1,0 +1,123 @@
+html, body{
+    box-sizing: border-box;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+}
+body > *{
+   padding : 1rem;
+}
+ul{
+    list-style: none;
+}
+
+/* -------- HEADER -------- */
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+nav ul{
+    width: 50%;
+
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+/* ------ HERO SECTION --------- */
+.hero{
+    overflow: visible;
+    width: 100%;
+    /* height: 50vh; */
+    height: fit-content;
+    background: #f8f8f8;
+    /* padding: 10px 0; */
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    
+    position: relative;
+}
+.hero .card-container{
+    min-width: 80%;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+.hero .card{
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.swiper{
+    width: 100%;
+    margin: 1rem;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ------ LEAGUES --------- */
+#leagues{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin: 1rem; */
+}
+.card{
+    margin: 0.75rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f8f8f8;
+
+    cursor: pointer;
+}
+.hero .card{
+    cursor: default;
+}
+.league-card{
+    height: 100px;
+    width: 22.5%;
+}
+.team-card{
+    height: 75px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+}
+
+#teams table{
+    width: 30%;
+}

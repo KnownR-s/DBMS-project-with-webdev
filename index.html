@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#leagues">Leagues</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#matches">Matches</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="matches-container">
+    
+            </div>
+        </div>
+    
+        <div class="scheduled-matches">
+            <h2 style="display: none;">Scheduled Matches</h2>
+            <div class="card-container">
+            
+            </div>
+        </div>
+    </div>
+
+    <h2>Leagues</h2>
+    <div id="leagues">
+        <div class="card-container">
+            
+        <!------ this is included using JS and backend ----------
+            <div class="card league-card">
+                <h3>${legaue.name}</h3>
+            </div>
+        ---------------------------------------------------------->
+
+        </div>
+        <table>
+            
+        <!------ this is included using JS and backend ----------
+            <thead>
+                <tr>
+                    <th>Competing Teams</th>
+                    <th>Status</th>
+                    <th>Date & Venue</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        ---------------------------------------------------------->
+
+        </table>
+        <div class="loading-message" style="text-align: center; margin-top: 1em; display: none;">Loading matches...</div>
+        <div class="empty-message" style="text-align: center; margin-top: 1em; display: none;">No match found.</div>
+    </div>
+
+    <h2>Teams</h2>
+    <div id="teams">
+        <div class="card-container">
+
+        <!------ this is included using JS and backend ----------
+            <div class='card team-card'>
+                <h3>${team.name}</h3>
+                <p>${team.league_name} || ${team.sport_name}</p>
+            </div>
+        ---------------------------------------------------------->
+
+        </div>
+
+        <h3></h3>
+        <table>
+
+        <!------ this is included using JS and backend ----------
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>            
+            <tbody>
+                <td>${member.name}</td>
+                <td>${member.age}</td>    
+            </tbody>
+        ---------------------------------------------------------->
+
+        </table>
+        <div class="loading-message" style="text-align: center; margin-top: 1em; display: none;">Loading team data...</div>
+    </div>
+
+    <h2>Matches</h2>
+    <div id="matches">
+        <div class="filter">
+            <select id="team-filter">
+                <option value="">All Teams</option>
+            </select>
+    
+            <select id="venue-filter">
+                <option value="">All Venues</option>
+            </select>
+    
+            <input type="date" id="date-filter">
+    
+            <select id="status-filter">
+                <option value="">All Status</option>
+                <option value="Scheduled">Scheduled</option>
+                <option value="Completed">Completed</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Competing Teams</th>
+                    <th>Status</th>
+                    <th>Date & Venue</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+
+            <!------ this is included using JS and backend ----------
+            <tbody>
+                
+            </tbody>
+            -------------------------------------------------------->
+
+        </table>
+        <div class="loading-message" style="text-align: center; margin-top: 1em;">Loading matches...</div>
+        <div class="empty-message" style="text-align: center; margin-top: 1em; display: none;">No matches found.</div>
+
+    </div>
+
+    <script src="scripts/hero-slider.js" defer></script>
+    <script src="scripts/leagues.js" defer></script>
+    <script src="scripts/teams.js" defer></script>
+    <script src="scripts/matches.js" defer></script>
+</body>
+</html>
